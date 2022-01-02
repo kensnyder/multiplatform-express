@@ -1,0 +1,7 @@
+# General files
+.DS_Store
+!.gitkeep
+node_modules
+# Editors
+.idea
+.vscode
