@@ -1,6 +1,5 @@
 // cloudflare workers
 require('./node_polyfills/globals.js');
-require('./node_polyfills/os.js');
 const http = require('http');
 const express = require('express');
 const appPrototype = require('express/lib/application.js');

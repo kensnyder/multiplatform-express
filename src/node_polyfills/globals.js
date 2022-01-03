@@ -57,6 +57,5 @@ process.emitWarning = function emitWarning(warning, type, code, ctor) {
   process.emit('warning', event);
 };
 
-// process.env.NODE_ENV = 'development';
 process.version = global.COMPATIBILITY_DATE;
 process.versions.node = null;

@@ -4,7 +4,7 @@
 [![Code Coverage](https://codecov.io/gh/kensnyder/multiplatform-express/branch/master/graph/badge.svg?v=1.0.0)](https://codecov.io/gh/kensnyder/multiplatform-express)
 [![ISC License](https://img.shields.io/npm/l/multiplatform-express.svg?v=1.0.0)](https://opensource.org/licenses/ISC)
 
-Run real express.js on Node and CloudFlare Workers with the same code
+Run real Express.js on Node and CloudFlare Workers with the same code
 
 ## Goals
 

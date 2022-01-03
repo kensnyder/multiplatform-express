@@ -11,9 +11,18 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^27.4.5",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "pretty-var-export": "^1.1.5"
   },
   "peerDependencies": {
     "express": "4.x"
+  },
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "events": "^3.3.0",
+    "is-ip": "^4.0.0",
+    "qs": "^6.9.6",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.0"
   }
 }
