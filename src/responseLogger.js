@@ -1,7 +1,7 @@
 /**
  * Middleware that
  * Console logs in the following format:
- * "[2022-01-02 13:49:52] GET my.workers.dev/api/v1/users HTTP/1.1 200 OK"
+ * "[2022-01-02 13:49:52] GET api/v1/users HTTP/1.1 200 OK"
  * @returns {undefined}
  */
 function responseLogger() {

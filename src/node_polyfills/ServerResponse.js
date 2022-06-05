@@ -18,6 +18,10 @@ class ServerResponse extends EventEmitter {
   getHeader(name) {
     return this._headers[name];
   }
+  removeHeader(name) {
+    this._headers[name] = undefined;
+    return this;
+  }
   writeHead(statusCode, headers) {
     this.statusCode = statusCode;
     this._headers = headers;
@@ -30,12 +34,18 @@ class ServerResponse extends EventEmitter {
     this._afterSends.forEach(fn => {
       this.workerEvent.waitUntil(fn());
     });
+    if (this.statusCode >= 300 && this.statusCode <= 399) {
+      // data may be empty string or undefined, but by spec, you should pass null
+      // passing an empty string will trigger CloudFlare Workers to issue an error
+      data = null;
+    }
     // TODO: do something with encoding?
     this._workerResolver(
       new Response(data, { status: this.statusCode, headers: this._headers })
     );
     this._wasResponseSent = true;
     this.emit('finish');
+    this.emit('close');
     return this;
   }
 }
